@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="AVHBENCH: A CROSS-MODAL HALLUCINATION BENCHMARK FOR AUDIO-VISUAL LARGE LANGUAGE MODELS.">
+        content="PAVAS: Physics-Aware Video-to-Audio Synthesis.">
   <meta name="keywords" content="Audio-visual learning, LLM, Hallucination">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AVHBench: A Cross-Modal Hallucination Benchmark for Audio-Visual Large Language Models</title>
+  <title>PAVAS: Physics-Aware Video-to-Audio Synthesis</title>
 
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -70,11 +70,11 @@
       <div class="columns is-centered">
 
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">AVHBench: A Cross-Modal Hallucination Benchmark for Audio-Visual Large Language Models</h1>
+          <h1 class="title is-1 publication-title">PAVAS: Physics-Aware Video-to-Audio Synthesis</h1>
 
 
           <div class="is-size-4 publication-authors">
-            <span class="author-block"><b>ICLR 2025</b></span>
+            <span class="author-block"><b>arXiv 2025</b></span>
           </div>
 
 
@@ -86,32 +86,32 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://sites.google.com/view/kimsungbin">Kim Sung-Bin*</a><sup>1</sup>,</span>
+              <a href="https://hyunbin70.github.io/">Oh Hyun-Bin</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://hyunbin70.github.io/">Oh Hyun-Bin*</a><sup>1</sup>,</span>
-            <span class="author-block">
-                <a href="https://ami.postech.ac.kr/d81b1c7c-7c84-4904-808e-097513816ae1/">JungMok Lee</a><sup>1</sup>,</span>
+                <a href="https://scholar.google.com/citations?user=ahqdEYUAAAAJ&hl=ja">Yuhta Takida</a><sup>2</sup>,</span>
             </span>
             <span class="author-block">
-              <a href="https://ardasnck.github.io/">Arda Senocak</a><sup>2</sup>,</span>
+              <a href="https://scholar.google.com/citations?user=wd00kkMAAAAJ&hl=ja">Toshimitsu Uesaka</a><sup>2</sup>,</span>
             </span>
             <span class="author-block">
-              <a href="https://mm.kaist.ac.kr/joon/">Joon Son Chung</a><sup>2</sup>,</span>
+              <a href="https://ami.kaist.ac.kr/members/tae-hyun-oh">Tae-Hyun Oh</a><sup>4</sup>,</span>
             </span>
             <span class="author-block">
-              <a href="https://ami.postech.ac.kr/members/tae-hyun-oh">Tae-Hyun Oh</a><sup>1</sup>
+              <a href="https://www.yukimitsufuji.com/">Yuki Mitsufuji</a><sup>2,3</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>POSTECH,&nbsp</span>
-            <span class="author-block"><sup>2</sup>KAIST&nbsp</span>
+            <span class="author-block"><sup>2</sup>Sony AI&nbsp</span>
+            <span class="author-block"><sup>3</sup>Sony Group Corporation&nbsp</span>
+            <span class="author-block"><sup>4</sup>KAIST&nbsp</span>
           </div>
 
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
+              <!-- PDF Link.
               <span class="link-block">
                                 <a href="https://openreview.net/pdf?id=jTEKTdI3K9"
                 class="external-link button is-normal is-rounded is-dark">
@@ -120,9 +120,9 @@
                   </span>
                   <span>Paper</span>
                 </a>
-              </span>
+              </span> -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2410.18325" class="external-link button is-normal is-rounded is-dark">
+                <a href="https://physics-aware-video-to-audio-synthesis.github.io/" class="external-link button is-normal is-rounded is-dark">
 <!--                <a class="external-link button is-normal is-rounded is-dark">-->
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -144,12 +144,12 @@
               <span class="link-block">
 <!--                <a href="https://github.com/google/nerfies"-->
 <!--                   class="external-link button is-normal is-rounded is-dark">-->
-                <a href="https://github.com/postech-ami/AVHBench"
+                <a href="https://physics-aware-video-to-audio-synthesis.github.io/"
                 class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Dataset</span>
+                  <span>Code (coming soon)</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
@@ -190,14 +190,15 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
 
-      <img src="./static/images/avhbench_teaser.png"
+      <img src="./static/images/teaser_pavas.png"
                  class="interpolation-image"
                  alt="Interpolate start reference image."
                  style="max-width: 100%;"
       />
 
       <h2 class="subtitle has-text-centered">
-        We introduce <span class="dnerf">AVHBench</span>, the first comprehensive benchmark specifically designed to evaluate the perception and comprehension capabilities of audio-visual LLMs.
+        <!-- We introduce <span class="dnerf">AVHBench</span>, the first comprehensive benchmark specifically designed to evaluate the perception and comprehension capabilities of audio-visual LLMs. -->
+        We introduce Physics-Aware Video-to-Audio Synthesis (PAVAS). [Top] Current V2A models often generate physically inconsistent audio. [Bottom] We estimate physics values (object-level mass and velocity) from an input video using Physics Parameter Estimator, which are explicitly integrated into a latent diffusion-based model using Phy-Adapter to generate a physically plausible audio.
       </h2>
     </div>
   </div>
@@ -213,15 +214,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Following the success of Large Language Models (LLMs), expanding their boundaries to new modalities represents a significant paradigm shift in multimodal understanding. 
-            Human perception is inherently multimodal, relying not only on text but also on auditory and visual cues for a complete understanding of the world.
-            In recognition of this fact, audio-visual LLMs have recently emerged. 
-            Despite promising developments, the lack of dedicated benchmarks poses challenges for understanding and evaluating models. 
-            In this work, we show that audio-visual LLMs struggle to discern subtle relationships between audio and visual signals, leading to hallucinations, underscoring the need for reliable benchmarks. 
-            To address this, we introduce AVHBench, the first comprehensive benchmark specifically designed to evaluate the perception and comprehension capabilities of audio-visual LLMs.
-            Our benchmark includes tests for assessing hallucinations, as well as the crossmodal matching and reasoning abilities of these models. 
-            Our results reveal that most existing audio-visual LLMs struggle with hallucinations caused by crossinteractions between modalities, due to their limited capacity to perceive complex multimodal signals and their relationships. 
-            Additionally, we demonstrate that simple training with our AVHBench improves robustness of audio-visual LLMs against hallucinations.
+          Recent advances in Video-to-Audio (V2A) generation have achieved impressive perceptual quality and temporal synchronization, yet most models remain appearance-driven, capturing visual-acoustic correlations without considering the physical factors that shape real-world sounds.
+          We present Physics-Aware Video-to-Audio Synthesis (PAVAS), a method that incorporates physical reasoning into a latent diffusion-based V2A generation through the Physics-Driven Audio Adapter (Phy-Adapter).
+          The adapter receives object-level physical parameters estimated by the Physical Parameter Estimator (PPE), which uses a Vision-Language Model (VLM) to infer the moving-object mass and a segmentation-based dynamic 3D reconstruction module to recover its motion trajectory for velocity computation.
+          These physical cues enable the model to synthesize sounds that reflect underlying physical factors.
+          To assess physical realism, we curate VGG-Impact, a benchmark focusing on object-object interactions, and introduce Audio-Physics Correlation Coefficient (APCC), an evaluation metric that measures consistency between physical and auditory attributes.
+          Comprehensive experiments show that PAVAS produces physically plausible and perceptually coherent audio, outperforming existing V2A models in both quantitative and qualitative evaluations.
           </p>
         </div>
       </div>
@@ -249,19 +247,18 @@
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
-          <h2 class="title is-4">Dataset Construction Pipeline</h2>
+          <h2 class="title is-4">PAVAS Pipeline</h2>
           <div class="column is-full-width has-text-centered">
             <figure class="image" style="width: 100%; max-width: 80%; margin: 0 auto;">
-              <img src="./static/images/avhbench_pipeline.png" class="interpolation-image" alt="Interpolate start reference image."/>
+              <img src="./static/images/method_pavas.png" class="interpolation-image" alt="Interpolate start reference image."/>
             </figure>
             <br><br>
             <div class="columns is-centered has-text-centered">
               <div class="column is-full-width">
                 <div class="content has-text-justified" style="max-width: 80%; margin: 0 auto;">
                   <p>
-                    We devise a dataset construction pipeline with automated procedures, consisting of two main stages: Stage 1 involves
-                    disentangling audio-visual information, and Stage 2 focuses on Question-and-Answer (QnA) generation for four different tasks. 
-                    At the end of each stage, we verify and correct the automatically generated outputs by employing a minimal number of human annotators.
+                    Given an input video, the Physics Parameter Estimator (PPE) extracts object-level mass and velocity.
+                    These physics cues are encoded by the Physics-Driven Audio Adapter (Phy-Adapter) and injected into the latent diffusion model alongside multimodal conditions.
                   </p>
                 </div>
               </div>
@@ -273,11 +270,12 @@
   </section>
   
 
+
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Updated Section Title -->
       <div class="columns is-centered has-text-centered">
-        <h3 class="title is-4">Dataset Statistics</h3>
+        <h3 class="title is-4">Qualitative Comparison on VGGSound test split</h3>
       </div>
       
       <!-- Figures Container -->
@@ -287,8 +285,9 @@
         <div class="columns is-centered">
           <div class="column is-full has-text-centered">
             <figure class="image" style="width: 100%; max-width: 80%; margin: 0 auto;">
-              <img src="./static/images/avhbench_stat.png" alt="Example 1">
+              <img src="./static/images/qual1_pavas.png" alt="Sample 1">
             </figure>
+            <p><strong>Samples 1&2</strong></p>
           </div>
         </div>
         
@@ -296,74 +295,53 @@
         <div class="columns is-centered">
           <div class="column is-full has-text-centered">
             <figure class="image" style="width: 100%; max-width: 80%; margin: 0 auto;">
-              <img src="./static/images/avhbench_ontology.png" alt="Example 2">
+              <img src="./static/images/qual2_pavas.png" alt="Sample 2">
             </figure>
+            <p><strong>Samples 3&4</strong></p>
           </div>
         </div>
-        
+
+        <!-- Figure 2 -->
+        <div class="columns is-centered">
+          <div class="column is-full has-text-centered">
+            <figure class="image" style="width: 100%; max-width: 80%; margin: 0 auto;">
+              <img src="./static/images/qual3_pavas.png" alt="Sample 3">
+            </figure>
+            <p><strong>Samples 5&6</strong></p>
+          </div>
+        </div>
+
         
       </div>
     </div>
   </section>
   
-
+  
 
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Updated Section Title -->
       <div class="columns is-centered has-text-centered">
-        <h3 class="title is-4">Qualitative Results on AVHBench</h3>
+        <h3 class="title is-4">Demo Video</h3>
       </div>
       
       <!-- Figures Container -->
       <div class="container">
         
-        <!-- Figure 1 -->
+
+        <!-- Demo Video -->
         <div class="columns is-centered">
           <div class="column is-full has-text-centered">
             <video controls style="width: 100%; max-width: 80%; margin: 0 auto;">
-              <source src="./static/images/avhbench_ex1.mp4" type="video/mp4">
+              <source src="./static/images/PAVAS_demo_video.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-            <figure class="image" style="width: 100%; max-width: 80%; margin: 0 auto;">
-              <img src="./static/images/avhbench_qual1.png" alt="Example 1">
-            </figure>
-            <p><strong>Example 1</strong></p>
-          </div>
-        </div>
-        
-        <!-- Figure 2 -->
-        <div class="columns is-centered">
-          <div class="column is-full has-text-centered">
-            <video controls style="width: 100%; max-width: 80%; margin: 0 auto;">
-              <source src="./static/images/avhbench_ex2.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <figure class="image" style="width: 100%; max-width: 80%; margin: 0 auto;">
-              <img src="./static/images/avhbench_qual2.png" alt="Example 2">
-            </figure>
-            <p><strong>Example 2</strong></p>
-          </div>
-        </div>
-        
-        <!-- Figure 3 -->
-        <div class="columns is-centered">
-          <div class="column is-full has-text-centered">
-            <video controls style="width: 100%; max-width: 80%; margin: 0 auto;">
-              <source src="./static/images/avhbench_ex3.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <figure class="image" style="width: 100%; max-width: 80%; margin: 0 auto;">
-              <img src="./static/images/avhbench_qual3.png" alt="Example 3">
-            </figure>
-            <p><strong>Example 3</strong></p>
           </div>
         </div>
         
       </div>
     </div>
   </section>
-  
   
 
 
@@ -372,15 +350,14 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{sung2024avhbench,
-        title={AVHBench: A Cross-Modal Hallucination Benchmark for Audio-Visual Large Language Models},
-        author={Sung-Bin, Kim and Hyun-Bin, Oh and Lee, JungMok and Senocak, Arda and Chung, Joon Son and Oh, Tae-Hyun},
-        journal={arXiv preprint arXiv:2410.18325},
-        year={2024}
+    <pre><code>@article{hyun2025pavas,
+        title={PAVAS: Physics-Aware Video-to-Audio Synthesis},
+        author={Hyun-Bin, Oh and Takida, Yuhta and Uesaka, Toshimitsu and Oh, Tae-Hyun and Mitsufuji, Yuki},
+        journal={arXiv preprint arXiv:2512.18325},
+        year={2025}
       }</code></pre>
   </div>
 </section>
-
 
 
 <!-- <section class="section" id="Acknowledgment">
